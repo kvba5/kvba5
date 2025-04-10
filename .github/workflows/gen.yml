@@ -1,0 +1,50 @@
+name: "Update Animation"
+
+on:
+    workflow_dispatch: 
+    push:
+        paths: 
+            - "/*.ttf"
+            - "/theme.toml"
+            - "/src/**/*"
+            - "/.github/workflows/gen.yml"
+    schedule:
+        - cron: '0 0 * * *'
+
+permissions:
+    contents: write
+
+jobs:
+    update:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                node-version: '22.14'
+
+            - name: Setup Bun
+              uses: oven-sh/setup-bun@v2
+              with:
+                bun-version: "1.2.5"
+
+            - name: Install ffmpeg
+              run: sudo apt update && sudo apt install -y ffmpeg
+
+            - name: Install bun dependencies
+              run: bun install --frozen-lockfile
+
+            - name: Run Generate Script
+              run: bun start
+              env:
+                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                USERNAME: ${{ github.repository_owner }}
+
+            - name: Update file on server
+              run: |
+                git add out.webp
+                git -c "user.name='terminal.js'" -c "user.email='i@am.bot'" commit -m "Updated stats!"
+                git push
