@@ -4,10 +4,10 @@ on:
     workflow_dispatch: 
     push:
         paths: 
-            - "/*.ttf"
-            - "/theme.toml"
-            - "/src/**/*"
-            - "/.github/workflows/gen.yml"
+            - "*.ttf"
+            - "theme.toml"
+            - "src/**/*"
+            - ".github/workflows/gen.yml"
     schedule:
         - cron: '0 0 * * *'
 
