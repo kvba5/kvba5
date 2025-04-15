@@ -33,8 +33,8 @@ const STATS: Record<string, Record<string, (string | number) | (string | number)
     contact: {
         "e-mail": "purr@meowpa.ws",
         discord: ".kb.",
-        telegram: "kvba5",
-        signal: "kvba.1000"
+        telegram: "meowabyte",
+        signal: "meowabyte.01"
     },
     [`GitHub (${USERNAME})`]: {
         "Total Stars": await gh.getStarCount(),
@@ -58,7 +58,7 @@ const b = new SequenceBuilder({
     .wait(200)
     .pushDown()
     .wait(500)
-    .appendText(`kvba (c) ${new Date().getFullYear()}`)
+    .appendText(`meowabyte (c) ${new Date().getFullYear()}`)
     .wait(200)
     .pushDown(2)
     .wait(500)
