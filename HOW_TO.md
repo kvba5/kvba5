@@ -1,4 +1,4 @@
-# kvba5 (terminal.js)
+# meowabyte (terminal.js)
 My readme generator script (originally named terminal.js) which generates nice little terminal animation with fastfetch-like output that has all stats about me.  
 
 Originally I used [github-readme-terminal by x0rzavi](https://github.com/x0rzavi/github-readme-terminal) which is written in Python but since I'm more knowledgable in Node.JS I decided to write my own package for similar use.  
