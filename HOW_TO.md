@@ -1,5 +1,8 @@
 # meowabyte (terminal.js)
 My readme generator script (originally named terminal.js) which generates nice little terminal animation with fastfetch-like output that has all stats about me.  
+> [!NOTE]
+> If you want to use the `ascii.txt` example README, please for the love of god DO NOT USE BRAILE ASCII ARTS. Since fonts are weird about them.  
+> <sup>(took me good hour to figure that out)</sup>
 
 Originally I used [github-readme-terminal by x0rzavi](https://github.com/x0rzavi/github-readme-terminal) which is written in Python but since I'm more knowledgable in Node.JS I decided to write my own package for similar use.  
 
@@ -10,8 +13,7 @@ You're allowed to use and/or modify this repo for your profile as long as you wi
 (Also please don't use `Github` class for other stuff then this project. It's actually bad and has no caching which might be bad long term)
 
 ## Requirements
-- [Node.JS](https://nodejs.org/)@^22.14
-- [Bun Runtime](https://bun.sh/)@^1.2.5
+- [Bun Runtime](https://bun.sh/)@^1.2.13
 - <details>
   <summary><a href="https://ffmpeg.org">FFmpeg</a></summary>  
 
